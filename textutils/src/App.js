@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import TextArea from "./components/TextArea";
 import Alert from "./components/Alert";
-import About from "./components/About";
+import Dictionary from "./components/Dictionary";
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -26,16 +26,16 @@ function App() {
         </div>
         <div className="container my-3">
           <Routes>
-            <Route path="/about" element={<About />} />
             <Route
               path="/"
               element={
                 <TextArea
                   showAlert={showAlert}
-                  heading="Enter text to analyse"
+                  heading="Enter Text to Analyse"
                 />
               }
             />
+            <Route path="/lookup" element={<Dictionary/>}/>
           </Routes>
         </div>
       </BrowserRouter>
